@@ -10,29 +10,6 @@ const req = require("express/lib/request");
 // MIDDLEWARES
 app.use(express.json());
 
-// BONUS ??? A VOIR
-function saveData(student, address) {
-  const address = new Address({
-    streetName: req.body.streetName,
-    streetNumber: req.body.streetNumber,
-    postCode: req.body.postCode,
-    city: req.body.city,
-  });
-
-  address.save(function () {
-    const student = new Student({
-      firstName: req.body.firstName,
-      surname: req.body.surname,
-      age: req.body.age,
-      address: address._id,
-    });
-
-    student.save((err) => {
-      console.log(err);
-    });
-  });
-}
-
 // MOMNGODB
 mongoose
   .connect(
