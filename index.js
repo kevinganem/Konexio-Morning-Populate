@@ -45,26 +45,6 @@ app.post("/students/:studentId/address", async (req, res) => {
   res.status(201).send("Address created");
 });
 
-// app.get("/stats", async (req, res) => {
-// 	const data = await User.aggregate([
-// 		{
-// 			$match: {
-// 				age: { $gte: 20 },
-// 			},
-// 		},
-// 		{
-// 			$group: {
-// 				_id: null,
-// 				ageAverage: { $avg: "$age" },
-// 				min: { $min: "$age" },
-// 				max: { $max: "$age" },
-// 			},
-// 		},
-// 	]);
-
-// 	res.json(data);
-// });
-
 // START SERVER
 app.listen(8000, () => {
   console.log("Listening");

@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const StudentSchema = mongoose.Schema({
-  email: String,
-  password: String,
+  firstName: String,
+  surname: String,
   age: Number,
   address: [{ type: mongoose.Types.ObjectId, ref: "Address" }],
 });
