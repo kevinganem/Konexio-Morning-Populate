@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 // MODELS
 const Student = require("./models/studentModel.js");
+const Address = require("./models/addressModel");
 
 // MIDDLEWARES
 app.use(express.json());

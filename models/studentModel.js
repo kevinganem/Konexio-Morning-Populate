@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
 
 const StudentSchema = mongoose.Schema({
-  address: String,
+  email: String,
+  password: String,
+  age: Number,
+  address: [{ type: mongoose.Types.ObjectId, ref: "Address" }],
 });
 
 const Student = mongoose.model("Student", StudentSchema);
